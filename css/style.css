@@ -202,9 +202,9 @@ header {
     border-bottom: 2px solid #ff6a14;
 }
 
-/* .navigate:hover:last-child {
+/* .navigate:nth-child(3) {
     border-bottom: none;
-    cursor: text;
+    /* cursor: text; */
 } */
 
 /* _____________banner starts */
