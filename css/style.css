@@ -204,13 +204,14 @@ header {
 
 /* .navigate:nth-child(3) {
     border-bottom: none;
-    /* cursor: text; */
+    cursor: text;
 } */
 
 /* _____________banner starts */
 
 .banner-wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin-top: 50px;
