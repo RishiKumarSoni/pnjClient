@@ -216,7 +216,7 @@ header {
     margin-top: 50px;
 }
 
-.content {
+.content { 
     color: #fff;
     /* flex: 0 0 auto; */
     width: 50%;
@@ -358,11 +358,13 @@ header {
  .which-card .text h3 {
     width: 24px;
     height: 24px;
-    padding: 0 0 12px 12px;
+    padding: 6px 0 6px 12px;
     margin: 0 8px;
+    display: flex;
+    align-items: center;
     border: 2px solid #000;
     border-radius: 12px;
-    background-color: transparent;
+    background: linear-gradient(135deg, #ff7e34, rgb(255, 214, 137));
  }
 
 .which-card .text h4 {
@@ -531,6 +533,79 @@ header {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
 }
 
+ /* ____________ faq section   */
+
+.faq {
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq h2 {
+    margin: 16px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.faq .tab {
+    position: relative;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    overflow: hidden;
+}
+
+.faq .tab input {
+    position: absolute;
+    right: 32px;
+    appearance: none;
+}
+
+.faq .tab label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.faq .tab label::after {
+    display: block;
+    content: '+';
+    font-size: 30px;
+    position: absolute;
+    right: 32px;
+    opacity: 0.4;
+    transition: transform 0.4s;
+}
+
+.faq .tab:hover label::after {
+    opacity: 1;
+}
+
+.faq .tab input:checked ~ label::after {
+    transform: rotate(135deg);
+}
+
+.faq .tab .ans {
+    max-height: 0;
+    transition: all 0.8s ease-in-out;
+    overflow: hidden;
+}
+
+.faq .tab input:checked ~ .ans {
+    max-height: 100vh;
+}
+
+.faq .tab .ans p {
+    padding: 12px;
+    position: relative;
+    z-index: 10;
+}
+
  /* __________ our offer starts here  */
 
 .our-offer {
@@ -649,11 +724,12 @@ ul li {
     flex-direction: row;
 }
 
-.social-media ul li a {
-    padding: 12px;
-    margin-right: 16px;
-    background-color: #fff;
-    aspect-ratio: 1/1;
+.social-media ul li a img{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 12px;
 }
 
 .disclaimer p {
